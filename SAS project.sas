@@ -1,4 +1,3 @@
-* SAS MiniProject #1;
 
 *1 - Read in files;
 proc import datafile="Median Income by Zip Code in US.xlsx"
