@@ -1,13 +1,13 @@
 * SAS MiniProject #1;
 
 *1 - Read in files;
-proc import datafile="C:\Users\mposner\OneDrive - Villanova University\Teaching\Statistical Programming\2019 Fall - Statistical Programming\SAS\Median Income by Zip Code in US.xlsx"
+proc import datafile="Median Income by Zip Code in US.xlsx"
 dbms=xlsx replace out=income;
 getnames=yes;
 run;
 
 
-proc import datafile="C:\Users\mposner\OneDrive - Villanova University\Teaching\Statistical Programming\2019 Fall - Statistical Programming\SAS\PA College Graduation by Zip Code.xlsx"
+proc import datafile="PA College Graduation by Zip Code.xlsx"
 dbms=xlsx replace out=grad;
 getnames=yes;
 run;
