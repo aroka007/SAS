@@ -1,14 +1,14 @@
 * First import the data;
-proc import datafile="G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\asia.xlsx" 
+proc import datafile="asia.xlsx" 
 dbms=xlsx out=asia;
 run;
-proc import datafile="G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\europe.xlsx"
+proc import datafile="europe.xlsx"
 dbms=xlsx out=europe;
 run;
-proc import datafile="G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\usa.xlsx"
+proc import datafile="usa.xlsx"
 dbms=xlsx out=usa;
 run;
-proc import datafile="G:\Project Jstarts\Courses\Statistical Data Analysis with SAS\data\carspec.xlsx"
+proc import datafile="carspec.xlsx"
 dbms=xlsx out=carspec;
 run;
 
@@ -42,22 +42,7 @@ run;
 
 
 
-* Introduction - this is to give you an idea of how a predictive modeling process is like but will not be practiced in this course;
-
-* Normally, before a modeling process, PROC CORR is usually utilized to investigate the relationship among variables, so that we eliminate them to 
-reduce the dimension.;
-* And recall the assumption for linear regression, one of the most important assumption is that the distribution of independent variable is normally distributed,
-what is it is not? We should use PROC UNIVARIATE to check the normality of each numeric variable, and if it is not normally distributed, we will need to transform 
-it first. This is out of scope of this course;
-* The missing values might need to be imputed before passing into the model because PROC REG will only consider a full case analysis, i.e. all predictors
-have to be non-missing, otherwise the record will be excluded and with less records, the statistical power is reduced;
-* In a typical predictive modeling process, the input data will be divided into at least two parts: training data set, and validation data set. In order to 
-fully represent the data, we need to learn about the sampling technique, which is also out of scope of this course.;
-* During the modeling process, if you want SAS to pick out variables that are significantly impacted the model, you can search for selection= option, it has stepwise, forward and backward.
-SAS will select the variables that have p value meeting the preset criteria.;
-* There are in fact much more contents for predictive modeling and this is not the focus of this course, instead, we should focus on statistical analysis to
-trully understand the data first.;
-
+*************************************************;
 data prepare;
 	set cars;
 * extract the number of doors;
